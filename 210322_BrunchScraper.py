@@ -9,7 +9,6 @@ import json
 
 from bs4 import BeautifulSoup
 import requests
-import pandas as pd
 
 # 스크레이퍼 함수 정의
 def brunch_scraper(url: str, kind: str, date: str) -> dict:
@@ -67,7 +66,7 @@ if __name__ == '__main__':
                 '우리집_반려동물', '멋진_캘리그래피', '사랑·이별', '감성_에세이']
     
     article_texts = []
-    for keyword in keywords:exi
+    for keyword in keywords:
         keyword_url = f'https://brunch.co.kr/keyword/{keyword}?q=g'
         text = requests.get(keyword_url)
         
